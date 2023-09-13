@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+source /opt/ros/neotic/setup.bash
+
+
+if [ ! -d ~/ros_workspace ]; then
+  mkdir -p ~/ros_workspace/src
+  cd ~/ros_workspace/src
+  ros2 pkg create my_package
+  cd ~/ros_workspace
+  colcon build
+fi
+
+ 
+source ~/ros_workspace/install/setup.bash
+ros2 run my_package my_node
