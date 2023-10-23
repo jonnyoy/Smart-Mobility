@@ -29,3 +29,31 @@ Running the Application
 
 ros2 run ros2 run master_discovery_fkie master_discovery
 
+Run the Professional CLI
+
+
+./fleet_management_cli.py --fleet-size=<your_fleet_size>
+
+Configuration
+The configuration file config.ini allows customization of application settings. Modify this file as needed.
+
+[General]
+log_file = /path/to/fleet_management.log
+
+Testing
+The application has been tested under the following scenarios:
+
+Allocating and routing a small fleet (e.g., fleet size 5).
+Allocating and routing a large fleet (e.g., fleet size 20).
+Canceling fleet management action mid-execution.
+Troubleshooting
+If you encounter issues, ensure that ROS2 is correctly installed and that all dependencies are satisfied.
+Check the logs for more information. The log file location is specified in the configuration file.
+Contributing
+Contributions are welcome! If you find a bug or have suggestions for improvements, please open an issue or create a pull request.
+
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+
+This README.md template provides clear instructions on setting up and running the ROS2 application, including building the package, launching the ROS2 master, and using the professional CLI. It also covers testing scenarios, troubleshooting tips, and information for contributors. Customize it according to your specific application and requirements.
